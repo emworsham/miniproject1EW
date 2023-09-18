@@ -5,6 +5,7 @@
 import yfinance as yf
 import numpy as np
 import matplotlib.pyplot as plt
+from pathlib import Path
 
 #(5/5 points) Initial comments with your name, class and project at the top of your .py file.
 #(5/5 points) Proper import of packages used.
@@ -30,6 +31,13 @@ def getClosing(ticker):
 
     return closingList
 
+# Create our charts folders
+try:
+    Path("charts").mkdir()
+except FileExistsError:
+    pass
+
+
 stocks = ["MSFT", "AAPL", "GME", "SONY", "META"]
 
 for stock in stocks:
@@ -54,6 +62,7 @@ for stock in stocks:
     plt.title("Closing Price for " + stock)
 
     # Saves plot
+
     savefile = "charts/" + stock + ".png"
     plt.savefig(savefile)
 
