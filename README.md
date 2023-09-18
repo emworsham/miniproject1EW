@@ -11,7 +11,12 @@ This project will be using the packages NumPy and Matplotlib in order to create 
 ## Pip install instructions
 
 Please run the following:
-```angular2html
+```
 pip install -r requirements.txt
+```
+
+## How to run the program
+```
+python main.py
 ```
 
